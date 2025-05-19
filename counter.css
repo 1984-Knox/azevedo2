@@ -1,0 +1,70 @@
+/* Estilos para o contador de casos */
+.counter-section {
+    padding: 80px 0;
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+}
+
+.counter-title {
+    color: var(--white);
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.counter-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--gold);
+}
+
+.counter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.counter-item {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+    padding: 30px 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.counter-item:hover {
+    transform: translateY(-10px);
+}
+
+.counter-value {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.counter-label {
+    font-size: 18px;
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .counter-container {
+        flex-direction: column;
+    }
+    
+    .counter-item {
+        margin: 10px 0;
+    }
+}
